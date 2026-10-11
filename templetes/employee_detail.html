@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><Django course></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div class="container pt-5">
+    <div class="card mx-auto" style="width: 18rem;">
+<img class="card-img-top" src="{{ employee.photo.url }}" alt="Employee Photo">
+  <div class="card-body">
+    <p class="card-text m-0">{{ employee.first_name }} {{ employee.last_name }}</p>
+            <p class="card-text m-0">{{ employee.designation }} </p>
+        <p class="card-text m-0">{{ employee.email_address }} </p>
+                <p class="card-text m-0">{{ employee.phone_number}} </p>
+
+
+  </div>
+  <a href="{%url 'home'%}" class="btn btn-primary">Back to Home</a>
+
+</div>
+
+</body>
+</html>
+
